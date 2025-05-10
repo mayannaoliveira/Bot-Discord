@@ -246,3 +246,27 @@ bot.run(TOKEN)
 # bot.run("TOKEN-DO-DISCORD")
 ```
 6. Para rodar o bot use o comando `py -3 main.py`.
+
+## Hospedagem no Discloud
+1. Acesse o [Discloud](https://discloud.com/) faça o login.
+2. Voltando a pasta onde está o bot crie o arquivo discloud.config:
+```
+NAME=NOME-DO-BOT
+# AVATAR=https://i.imgur.com/AVATAR.png
+TYPE=bot
+MAIN=main.js
+RAM=100
+AUTORESTART=true
+VERSION=latest
+APT=tools
+START=
+BUILD=
+```
+
+3. Gerar arquivo requirements.txt pelo terminal: 
+`pip install pipreqs`, depois o comando:`pipreqs .\PASTA-DO-BOT\`
+3.1 Ou somente pelo comando caso der erro e o pipreqs esteja procurando dependências em `.venv`, o diretório do virtualenv.
+`pipreqs --ignore .venv`
+4. Compactar em arquivo .zip todos os arquivos: `.env`, `discloud.config`, `.gitignore`, `main.py` e `requirements.txt`.
+5. Aguarde o upload do bot e sua iniciação.
+
